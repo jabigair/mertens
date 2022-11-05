@@ -10,6 +10,6 @@ From here, we need to calculate $\alpha$ and $\psi$, as defined above, to a high
 
 Now we have all the highly precise pieces we need to run Odlyzko and te Riele's argument. All we need to do is run `mertens.sage` with the input files for the high-precision zeros, high-precision $\psi$'s, and high-precision $\alpha$'s. 
 
-Then, the `mertens.sage` program will print $y_ {0}$ and $h_ {k}(y_ {0})$. It will also produce a plot of $h_ {k]$ around $y_ {0}$, which it will show and save to the file `mertens_graph.png`. 
+Then, the `mertens.sage` program will print $y_ {0}$ and $h_ {k}(y_ {0})$. It will also produce a plot of $h_ {k}$ around $y_ {0}$, which it will show and save to the file `mertens_graph.png`. 
 
 For simplicity, we've included our high-precision files in the folder `high_ prec`, which can be used instead of constructing your own.
