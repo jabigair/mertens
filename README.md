@@ -1,5 +1,9 @@
 # Disproof of the Mertens conjecture
 
+## Introduction
+
+This code replicates one case of Odlyzko and te Riele's original disproof of the Mertens conjecture.
+
 ## The conjecture
 
 To state the Mertens conjecture, we first need two definitions. Let
@@ -82,7 +86,7 @@ $$
     \end{align*}
 $$
 
-If we take $N$ sufficiently large, then we know that this first sum will be big. (A previous result of Titchmarsh showed that the sum over all of the $\alpha_ {i}$ diverges.) So if we choose a $y$ for which the second sum is small, we'll be able to make $h_ {k}(y)$ large, as desired. Notice that making this second sum small is equivalent to choosing a $y$ such that $(y \gamma_ {i} - \psi_ {i})$ is close to some multiple of $2\pi$. [^1] To choose $y$, Odlyzko and te Riele constructed a particular lattice and used the LLL algorithm to get a guess for what this $y$ should look like. 
+If we take $N$ sufficiently large, then we know that this first sum will be big. (A previous result of Titchmarsh showed that the sum over all of the $\alpha_ {i}$ diverges.) So if we choose a $y$ for which the second sum is small, we'll be able to make $h_ {k}(y)$ large, as desired. Notice that making this second sum small is equivalent to choosing a $y_ {0}$ such that $(y_ {0} \gamma_ {i} - \psi_ {i})$ is close to some multiple of $2\pi$. [^1] To choose $y_ {0}$, Odlyzko and te Riele constructed a particular lattice and used the LLL algorithm to get a guess for what this $y_ {0}$ should look like. 
 
 The $y_ {0}$ they got from this process yielded a value for $h_ {k}$ that was greater than one. This proved that there was some $x$ such that $M(x) / \sqrt{x} > 1$. A similar computation can be used to break the conjectured lower bound as well, thereby disproving the Mertens conjecture.
 
@@ -102,5 +106,5 @@ Now we have all the highly precise pieces we need to run Odlyzko and te Riele's 
 
 Then, the `mertens.sage` program will print $y_ {0}$ and $h_ {k}(y_ {0})$. It will also produce a plot of $h_ {k}$ around $y_ {0}$, which it will show and save to the file `mertens_graph.png`. 
 
-For simplicity, we've included our high-precision files in the folder `high_ prec`, which can be used instead of constructing your own.
+For simplicity, we've included our high-precision files in the folder `high_prec`, which can be used instead of constructing your own.
 
